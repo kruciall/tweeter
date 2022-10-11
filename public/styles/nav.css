@@ -1,0 +1,23 @@
+.navbar {
+  color: #FFFFFF;
+  width: 100%;
+  background-color: #4056A1;
+  height: 120px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+
+.logo {
+  font-family: 'Bungee', cursive;
+}
+
+.write-a-new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
