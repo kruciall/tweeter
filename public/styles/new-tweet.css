@@ -3,26 +3,124 @@
   font-family: 'Source Sans Pro', sans-serif;
   margin: auto;
 }
-output {
+/* output {
   display: flex;
   justify-content: flex-end;
   align-self: stretch;
-}
+} */
 .new-tweet {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 
 }
 
-button {
+.button {
   display: flex;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #ffffff;
-  background-color: rgb(84, 124, 189);
-  flex-direction: column;
+  font-family: 'Bungee', cursive;;
+  color: #2d2d2d;
+  background-color: transparent;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
   font-size: 22px;
-  padding: .3em 0.8em;
+  padding: 0.3em 0em;
+  padding-bottom: 2em;
+}
+
+button {
+  color: rgb(255, 255, 255);
+  background-color: #1d7bad;
+}
+
+textarea {
+  /* display: flex; */
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+  background-color: transparent;
+  border-bottom: 4px black solid;
+  /* border-top-color: black; */
+}
+
+
+article {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
   
+}
+
+article:hover {
+  box-shadow: 10px 10px 5px 0px rgba(77, 77, 77, 0.75);
+}
+
+.tweet-container header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.avatar1 {
+  display: inline-flex;
+  width: 7%;
+  padding-left: 1em;
+  align-items: baseline;
+  padding-right: 1em;
+}
+
+.username {
+  display: inline-flex;
+  font-size: 100%;
+  line-height: 50%;
+}
+
+.handle {
+  display: flex-end;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  color: #7c7c7c;
+  font-size: 100%;
+  line-height: 50%;
+  padding-right: 4em;
+}
+
+.tweet-content {
+  display: flex;
+  padding-inline-start: 1.5em;
+
+}
+
+.icons {
+  width: 100%;
+  display: flex;
+  padding-top: 6px;
+  padding-right: 10px;
+  justify-content: flex-end;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-top: 4px solid black;
+  font-size: 65%;
+}
+i {
+  padding: 8px;
+  display: flex;
+  align-items: baseline;
+  color: #1d7bad;
+}
+
+i:hover {
+  color:rgb(177, 0, 0)
 }
 
