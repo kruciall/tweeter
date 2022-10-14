@@ -8,18 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
     
-   <!-- App CSS -->
+    
+    
+    <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
-
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+    
+    
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -36,21 +40,20 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-
     <header class="profile"> 
       <div class="avatar">
           <img src="/images/profile-hex.png"> 
+          <div class="user">
+              <h2>Vinson Wong</h2>
+          </div>
       </div>
       <br>
-      <div class="user">
-          <h2>Vinson Wong</h2>
-      </div>
   </header>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <div class="error"></div>
         <form method="POST" action="/tweets">
           <label> What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -60,30 +63,8 @@
           </div>
         </form>
       </section>
-      <article class="tweet-container">
-        <header>
-          <img class="avatar1" src="/images/samurai-avatar.png">
-          <p class="username">Carol Wong</p>
-          <p class="handle">@Carol.W</p>
-        </header>
-        <div class="tweet-content">
-          <p>I am the king of the world! TWEET TWEET.</p>
-        </div>
-        <footer class="footer-content">
-
-        <p>10 days ago</p>
-
-          <div class="icons"></div>
-          <i class="fa-solid fa-flag"></i>
-          <i class="fa-solid fa-retweet"></i>
-          <i class="fa-solid fa-heart"></i>
-        </div>
-          <!-- icons -->
-        </footer>
-        </article>
+      <section id="tweets-container">
       </section>
-      
     </main>
-   <p>sdsdsdsdsdsds</p>
   </body>
 </html>

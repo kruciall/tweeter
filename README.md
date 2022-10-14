@@ -2,7 +2,25 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Built with HTML, CSS, JS, JQuery, AJAX, Express, and Node.
+
+## Functionality
+
+### Nav Bar
+Fixed Nav bar at the top of the page compatible with tablet/mobile and large screen sizes.
+
+### Compose Tweets
+Below the Nav bar consists of the compose tweets and includes our users avatar profile picture and username. On mobile the avatar and username is right below the Nav bar and on large devices the page is split in the middle where our avatar and username resides on the left and the right contains our compose tweet form input.
+
+Input form consists of a character counter indicating how many characters the user has left up to a maximum of 140 characters per tweet. The counter turns red once it has reached past the maximum characters. 
+
+If the form is empty OR over the maximum characters and the user attempts to submit the form, appropriate errors will be alerted. Successful tweet will refresh our list displaying the new tweet at the top sorted by date posted.
+
+### Tweets List
+
+The tweets list contains all of our tweets that were tweeted! The container includes a avatar and username along with our users @ handle. At the bottom of the container contains our created at information along with a flag, retweet, and heart icon that are contain hover effect.
+
+
 
 ## Getting Started
 
