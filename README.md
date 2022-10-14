@@ -20,6 +20,15 @@ If the form is empty OR over the maximum characters and the user attempts to sub
 
 The tweets list contains all of our tweets that were tweeted! The container includes a avatar and username along with our users @ handle. At the bottom of the container contains our created at information along with a flag, retweet, and heart icon that are contain hover effect.
 
+### Screenshots and GIFs
+
+!["Main page of Tweeter"](https://github.com/kruciall/tweeter/blob/master/docs/tweeter-screenshot.png)
+
+!["Composing a tweet"](https://github.com/kruciall/tweeter/blob/master/docs/tweeter-gif-1-tweet-submit.gif)
+
+!["Large screen device shrinking to mobile size"](https://github.com/kruciall/tweeter/blob/master/docs/tweeter-gif-2-shrink.gif)
+
+!["Displaying Errors"](https://github.com/kruciall/tweeter/blob/master/docs/tweeter-gif-3-errors.gif)
 
 
 ## Getting Started
