@@ -2,11 +2,13 @@
  * Client-side JS logic goes here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+*/
 
 $(document).ready(() => {
+  
 
-  const createTweetElement = function (data) {
+  //can factor all these functions out of the doc.ready
+  const createTweetElement = function(data) {
 
     const tweet = data.content.text;
     const name = data.user.name;
@@ -15,30 +17,32 @@ $(document).ready(() => {
     const createdAt = data.created_at;
 
     return ` <article class="tweet-container">
-    <header>
-    <div class="avatar-container">
-    <img class="avatar1" src=${escape(avatar)}>
-    <p class="username">${escape(name)}</p>
-    </div>
-    <p class="handle">${escape(handle)}</p>
-    </header>
-    <div class="tweet-content">
-    <p>${escape(tweet)}</p>
-    </div>
+      <header>
+        <div class="avatar-container">
+          <img class="avatar1" src=${escape(avatar)}>
+          <p class="username">${escape(name)}</p>
+        </div>
+          <p class="handle">${escape(handle)}</p>
+      </header>
+    
+      <div class="tweet-content">
+        <p>${escape(tweet)}</p>
+      </div>
     <div class="separator"></div>
     <footer class="footer-content">
-    <h5 class="created_at">${timeago.format(createdAt)}</h5>
-    <div class="icons">
-    <i class="fa-solid fa-flag"></i>
-    <i class="fa-solid fa-retweet"></i>
-    <i class="fa-solid fa-heart"></i>
-    </div>
+      <h5 class="created_at">${timeago.format(createdAt)}</h5>
+      <div class="icons">
+        <i class="fa-solid fa-flag"></i>
+        <i class="fa-solid fa-retweet"></i>
+        <i class="fa-solid fa-heart"></i>
+      </div>
     </footer>
     </article>`;
   };
 
   //renders the tweets to the top of the page with prepend
   const renderTweets = function (tweets) {
+    $('#tweets-container').empty(); //to prevent duplication of tweets
     for (let tweet of tweets) {
       const tweetElement = createTweetElement(tweet);
       $('#tweets-container').prepend(tweetElement);
@@ -48,13 +52,12 @@ $(document).ready(() => {
 
 
   const loadTweets = function () {
-    $.ajax('/tweets', { method: "GET" })
-      .then(function (tweet) {
+    $.get('/tweets')
+      .then(function(tweet) {
         renderTweets(tweet);
       });
   };
 
-  loadTweets(renderTweets);
 
   $("form").on("submit", function (event) {
     event.preventDefault();
@@ -82,5 +85,6 @@ $(document).ready(() => {
     return div.innerHTML;
   };
 
+  loadTweets();
 
 });
